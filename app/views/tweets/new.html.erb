@@ -1,0 +1,20 @@
+<div class="contents row">
+  <div class="container">
+    <%= form_with(model: @tweet, local: true) do |form| %>
+      <h3>
+        投稿する
+      </h3>
+    <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/58Hj4BsMIQs"
+    frameborder="0" allowfullscreen>
+    </iframe>
+    <%= video_tag 'test.webm', autoplay: true, muted: true, controls: true, preload: true %>
+    <%= form.text_field :image, placeholder: "Image Url" %>
+    <%= form.text_area :text, placeholder: "text" , rows: "10" %>
+    <%= form.submit "SEND" %>
+    <%# <%= render partial: "form", locals: { form: form } %>
+    <% end %>
+  </div>
+</div>
+
+
