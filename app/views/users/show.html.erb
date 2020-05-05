@@ -2,9 +2,9 @@
   <p><%= @nickname %>さんの投稿一覧</p>
 
   <% @tweets.each do |tweet| %>
-    <%= form.text_field :image, placeholder: "Image Url" %>
-    <%= form.text_area :text, placeholder: "text" , rows: "10" %>
-    <%= form.submit "SEND" %>
+   <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+      <%= simple_format(tweet.text) %>
+    </div>
     <%# <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
   <% end %>
   <%= paginate(@tweets) %>
